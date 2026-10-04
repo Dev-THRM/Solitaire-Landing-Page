@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $service['title'] }} | Solitaire Consultancy</title>
     <meta name="description" content="{{ Str::limit($service['description'], 150) }}">
+    <meta name="keywords" content="{{ strtolower($service['title']) }}, hire domestic staff, luxury staffing agency Mumbai, Solitaire Consultancy services">
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $service['title'] }} | Solitaire Consultancy">
+    <meta property="og:description" content="{{ Str::limit($service['description'], 150) }}">
+    <meta property="og:image" content="{{ $service['image'] }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="{{ $service['title'] }} | Solitaire Consultancy">
+    <meta property="twitter:description" content="{{ Str::limit($service['description'], 150) }}">
+    <meta property="twitter:image" content="{{ $service['image'] }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +68,7 @@
                 </li>
                 <li><a href="/blogs">Blogs</a></li>
                 <li><a href="/jobs">Jobs</a></li>
-                <li><a href="/#contact" class="btn-primary">Contact Us</a></li>
+                <li><a href="/contact" class="btn-primary">Contact Us</a></li>
             </ul>
             <div class="mobile-menu-icon" id="mobile-menu-icon">
                 <div class="bar"></div>
@@ -83,14 +97,14 @@
                     {{ $service['description'] }}
                 </p>
                 <div class="text-center mt-12" style="margin-top: 50px;">
-                    <a href="/#contact" class="btn-primary" style="display: inline-block;">Enquire Now</a>
+                    <a href="/contact" class="btn-primary" style="display: inline-block;">Enquire Now</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">

@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Solitaire Consultancy</title>
+    <meta name="description" content="Get in touch with Solitaire Consultancy. Reach out to our experts for luxury domestic staffing solutions in Mumbai and the UK. We are available 24/7 to assist you.">
+    <meta name="keywords" content="contact Solitaire Consultancy, hire domestic staff Mumbai, domestic staffing agency contact, reach luxury household staff">
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Contact Us | Solitaire Consultancy">
+    <meta property="og:description" content="Get in touch with Solitaire Consultancy. Reach out to our experts for luxury domestic staffing solutions in Mumbai and the UK. We are available 24/7 to assist you.">
+    <meta property="og:image" content="{{ asset('solitaire-logo.png') }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Contact Us | Solitaire Consultancy">
+    <meta property="twitter:description" content="Get in touch with Solitaire Consultancy. Reach out to our experts for luxury domestic staffing solutions in Mumbai and the UK. We are available 24/7 to assist you.">
+    <meta property="twitter:image" content="{{ asset('solitaire-logo.png') }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

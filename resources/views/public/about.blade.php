@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Solitaire Consultancy</title>
+    <meta name="description" content="Learn about Solitaire Consultancy, Mumbai's premier domestic staffing agency dedicated to providing elite household professionals and personalized service.">
+    <meta name="keywords" content="about Solitaire Consultancy, premium staffing agency Mumbai, luxury domestic staff India, elite household recruitment">
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="About Us | Solitaire Consultancy">
+    <meta property="og:description" content="Learn about Solitaire Consultancy, Mumbai's premier domestic staffing agency dedicated to providing elite household professionals and personalized service.">
+    <meta property="og:image" content="{{ asset('solitaire-logo.png') }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="About Us | Solitaire Consultancy">
+    <meta property="twitter:description" content="Learn about Solitaire Consultancy, Mumbai's premier domestic staffing agency dedicated to providing elite household professionals and personalized service.">
+    <meta property="twitter:image" content="{{ asset('solitaire-logo.png') }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

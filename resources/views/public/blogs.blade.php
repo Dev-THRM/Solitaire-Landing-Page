@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs | Solitaire Consultancy</title>
+    <meta name="description" content="Read the latest insights and tips on luxury domestic staffing, household management, and finding the perfect estate staff from Solitaire Consultancy.">
+    <meta name="keywords" content="domestic staffing blog, household management tips, luxury lifestyle India, Solitaire Consultancy news">
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Blogs | Solitaire Consultancy">
+    <meta property="og:description" content="Read the latest insights and tips on luxury domestic staffing, household management, and finding the perfect estate staff from Solitaire Consultancy.">
+    <meta property="og:image" content="{{ asset('solitaire-logo.png') }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Blogs | Solitaire Consultancy">
+    <meta property="twitter:description" content="Read the latest insights and tips on luxury domestic staffing, household management, and finding the perfect estate staff from Solitaire Consultancy.">
+    <meta property="twitter:image" content="{{ asset('solitaire-logo.png') }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +49,7 @@
                 </li>
                 <li><a href="/blogs">Blogs</a></li>
                 <li><a href="/jobs">Jobs</a></li>
-                <li><a href="/#contact" class="btn-primary">Contact Us</a></li>
+                <li><a href="/contact" class="btn-primary">Contact Us</a></li>
             </ul>
             <div class="mobile-menu-icon" id="mobile-menu-icon">
                 <div class="bar"></div>
@@ -80,7 +95,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">

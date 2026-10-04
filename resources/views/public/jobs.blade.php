@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers | Solitaire Consultancy</title>
+    <meta name="description" content="Explore current job openings at Solitaire Consultancy. Apply for luxury domestic staffing positions such as house managers, executive assistants, private chefs, and nannies.">
+    <meta name="keywords" content="domestic staff jobs Mumbai, nanny jobs India, private chef openings, house manager careers, Solitaire Consultancy jobs">
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Careers | Solitaire Consultancy">
+    <meta property="og:description" content="Explore current job openings at Solitaire Consultancy. Apply for luxury domestic staffing positions such as house managers, executive assistants, private chefs, and nannies.">
+    <meta property="og:image" content="{{ asset('solitaire-logo.png') }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Careers | Solitaire Consultancy">
+    <meta property="twitter:description" content="Explore current job openings at Solitaire Consultancy. Apply for luxury domestic staffing positions such as house managers, executive assistants, private chefs, and nannies.">
+    <meta property="twitter:image" content="{{ asset('solitaire-logo.png') }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +49,7 @@
                 </li>
                 <li><a href="/blogs">Blogs</a></li>
                 <li><a href="/jobs">Jobs</a></li>
-                <li><a href="/#contact" class="btn-primary">Contact Us</a></li>
+                <li><a href="/contact" class="btn-primary">Contact Us</a></li>
             </ul>
             <div class="mobile-menu-icon" id="mobile-menu-icon">
                 <div class="bar"></div>
@@ -120,7 +135,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">

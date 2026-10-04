@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Domestic Staffing Agency in Mumbai | Solitaire Consultancy</title>
     <meta name="description" content="Mumbai's leading luxury domestic staffing agency. We specialize in sourcing elite household staff, estate managers, personal assistants, and private chefs for high-net-worth individuals.">
+    <meta name="keywords" content="domestic staffing Mumbai, luxury household staff, estate managers, personal assistants, private chefs, nanny agency India, Solitaire Consultancy">
+    <link rel="canonical" href="{{ url()->current() }}">
     
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Premium Domestic Staffing Agency in Mumbai | Solitaire Consultancy">
+    <meta property="og:description" content="Mumbai's leading luxury domestic staffing agency. We specialize in sourcing elite household staff, estate managers, personal assistants, and private chefs for high-net-worth individuals.">
+    <meta property="og:image" content="{{ asset('solitaire-logo.png') }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Premium Domestic Staffing Agency in Mumbai | Solitaire Consultancy">
+    <meta property="twitter:description" content="Mumbai's leading luxury domestic staffing agency. We specialize in sourcing elite household staff, estate managers, personal assistants, and private chefs for high-net-worth individuals.">
+    <meta property="twitter:image" content="{{ asset('solitaire-logo.png') }}">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
