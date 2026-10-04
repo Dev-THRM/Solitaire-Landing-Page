@@ -13,6 +13,7 @@ class JobListingController extends Controller
     public function index()
     {
         $jobs = JobListing::latest()->get();
+
         return view('jobs.index', compact('jobs'));
     }
 
@@ -33,12 +34,12 @@ class JobListingController extends Controller
             'title' => 'required|max:255',
             'location' => 'required|max:255',
             'type' => 'required',
-            'description' => 'required'
+            'description' => 'required',
         ]);
 
         JobListing::create($request->all());
 
-        return redirect()->route('jobs.index')->with('success', 'Job posted successfully.');
+        return redirect()->route('admin.jobs.index')->with('success', 'Job posted successfully.');
     }
 
     /**

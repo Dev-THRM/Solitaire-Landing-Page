@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -13,6 +14,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::latest()->get();
+
         return view('blogs.index', compact('blogs'));
     }
 
@@ -32,12 +34,12 @@ class BlogController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'content' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $blog = new Blog();
+        $blog = new Blog;
         $blog->title = $request->title;
-        $blog->slug = \Illuminate\Support\Str::slug($request->title);
+        $blog->slug = Str::slug($request->title);
         $blog->content = $request->content;
 
         if ($request->hasFile('image')) {
@@ -47,7 +49,7 @@ class BlogController extends Controller
 
         $blog->save();
 
-        return redirect()->route('blogs.index')->with('success', 'Blog created successfully.');
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog created successfully.');
     }
 
     /**
