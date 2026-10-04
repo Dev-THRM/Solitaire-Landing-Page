@@ -53,24 +53,34 @@ class JobListingController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(JobListing $jobListing)
+    public function edit(JobListing $job)
     {
-        //
+        return view('jobs.edit', compact('job'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, JobListing $jobListing)
+    public function update(Request $request, JobListing $job)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'location' => 'required|max:255',
+            'type' => 'required',
+            'description' => 'required',
+        ]);
+
+        $job->update($request->all());
+
+        return redirect()->route('admin.jobs.index')->with('success', 'Job updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(JobListing $jobListing)
+    public function destroy(JobListing $job)
     {
-        //
+        $job->delete();
+        return redirect()->route('admin.jobs.index')->with('success', 'Job deleted successfully.');
     }
 }
