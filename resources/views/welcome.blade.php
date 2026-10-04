@@ -38,7 +38,7 @@
                 </li>
                 <li><a href="/blogs">Blogs</a></li>
                 <li><a href="/jobs">Jobs</a></li>
-                <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+                <li><a href="/contact" class="btn-primary">Contact Us</a></li>
             </ul>
             <div class="mobile-menu-icon" id="mobile-menu-icon">
                 <div class="bar"></div>
@@ -52,8 +52,8 @@
     <section id="home" class="hero transcend-hero">
         <!-- Background -->
         <div class="transcend-bg dual-video-bg">
-            <video autoplay loop muted playsinline src="{{ asset('hero-video1.mp4') }}" class="hero-video video-left"></video>
-            <video autoplay loop muted playsinline src="{{ asset('hero-video2.mp4') }}" class="hero-video video-right"></video>
+            <video autoplay muted playsinline src="{{ asset('hero-video1.mp4') }}" class="hero-video video-left active" id="hero-vid-1"></video>
+            <video muted playsinline src="{{ asset('hero-video2.mp4') }}" class="hero-video video-right" id="hero-vid-2"></video>
             <div class="bg-gradient-mask dark-theme-mask"></div>
         </div>
 
@@ -459,12 +459,12 @@
         <div class="container text-center reveal-up">
             <h2>Ready to transform your household management?</h2>
             <p>Connect with our consultants today for a confidential discussion about your staffing requirements.</p>
-            <a href="#contact" class="btn-primary large">Contact Us Now</a>
+            <a href="/contact" class="btn-primary large">Contact Us Now</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -495,5 +495,27 @@
 
     <!-- Scripts -->
     <script src="{{ asset('script.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const vid1 = document.getElementById('hero-vid-1');
+            const vid2 = document.getElementById('hero-vid-2');
+            
+            if(vid1 && vid2) {
+                vid1.addEventListener('ended', function() {
+                    vid1.classList.remove('active');
+                    vid2.classList.add('active');
+                    vid2.currentTime = 0;
+                    vid2.play();
+                });
+                
+                vid2.addEventListener('ended', function() {
+                    vid2.classList.remove('active');
+                    vid1.classList.add('active');
+                    vid1.currentTime = 0;
+                    vid1.play();
+                });
+            }
+        });
+    </script>
 </body>
 </html>

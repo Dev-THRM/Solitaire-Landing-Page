@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\JobApplicationController;
 use App\Http\Controllers\JobListingController;
 use App\Http\Controllers\ProfileController;
@@ -10,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $blogs = Blog::latest()->take(3)->get();
-    $jobs = JobListing::latest()->take(6)->get();
+    $jobs = JobListing::latest()->take(3)->get();
 
     return view('welcome', compact('blogs', 'jobs'));
 });
@@ -47,6 +48,8 @@ Route::get('/jobs', function () {
 Route::post('/jobs/{job}/apply', [JobApplicationController::class, 'store'])->name('jobs.apply');
 
 Route::view('/about', 'public.about');
+Route::view('/contact', 'public.contact')->name('contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::get('/services/{slug}', function ($slug) {
     $services = [

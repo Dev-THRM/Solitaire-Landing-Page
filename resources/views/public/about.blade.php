@@ -34,7 +34,7 @@
                 </li>
                 <li><a href="/blogs">Blogs</a></li>
                 <li><a href="/jobs">Jobs</a></li>
-                <li><a href="/#contact" class="btn-primary">Contact Us</a></li>
+                <li><a href="/contact" class="btn-primary">Contact Us</a></li>
             </ul>
             <div class="mobile-menu-icon" id="mobile-menu-icon">
                 <div class="bar"></div>
@@ -77,7 +77,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
