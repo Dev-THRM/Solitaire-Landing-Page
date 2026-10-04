@@ -31,14 +31,14 @@
             </div>
 
             <!-- Stats Overview -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex items-center hover:shadow-md transition-shadow duration-300">
                     <div class="rounded-full bg-blue-50 p-4 mr-4">
                         <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
                     </div>
                     <div>
                         <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">Total Blogs</p>
-                        <p class="text-3xl font-bold text-gray-900">24</p>
+                        <p class="text-3xl font-bold text-gray-900">{{ $blogCount }}</p>
                     </div>
                 </div>
                 
@@ -48,17 +48,7 @@
                     </div>
                     <div>
                         <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">Active Jobs</p>
-                        <p class="text-3xl font-bold text-gray-900">12</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex items-center hover:shadow-md transition-shadow duration-300">
-                    <div class="rounded-full bg-purple-50 p-4 mr-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                    </div>
-                    <div>
-                        <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">Total Views</p>
-                        <p class="text-3xl font-bold text-gray-900">18.4K</p>
+                        <p class="text-3xl font-bold text-gray-900">{{ $jobCount }}</p>
                     </div>
                 </div>
             </div>
@@ -73,7 +63,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Manage Blogs</h3>
                         <p class="text-gray-500 mb-8 leading-relaxed">Create compelling insight articles, edit existing content, and engage with your audience through our intuitive rich text editor.</p>
-                        <a href="{{ route('blogs.index') }}" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition-colors duration-200 shadow-sm shadow-blue-200">
+                        <a href="{{ route('admin.blogs.index') }}" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition-colors duration-200 shadow-sm shadow-blue-200">
                             Manage Articles
                             <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
@@ -89,7 +79,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Job Listings</h3>
                         <p class="text-gray-500 mb-8 leading-relaxed">Post open positions, manage job descriptions, and attract top talent to your company. Keep your career page up to date.</p>
-                        <a href="{{ route('jobs.index') }}" class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-colors duration-200 shadow-sm shadow-indigo-200">
+                        <a href="{{ route('admin.jobs.index') }}" class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-colors duration-200 shadow-sm shadow-indigo-200">
                             Manage Positions
                             <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
