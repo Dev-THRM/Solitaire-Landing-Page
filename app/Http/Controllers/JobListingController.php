@@ -10,9 +10,17 @@ class JobListingController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $jobs = JobListing::latest()->get();
+        $query = JobListing::latest();
+        
+        if ($request->filled('search')) {
+            $searchTerm = '%' . $request->search . '%';
+            $query->where('title', 'like', $searchTerm)
+                  ->orWhere('location', 'like', $searchTerm);
+        }
+        
+        $jobs = $query->get();
 
         return view('jobs.index', compact('jobs'));
     }

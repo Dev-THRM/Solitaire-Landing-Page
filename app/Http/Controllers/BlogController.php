@@ -11,9 +11,15 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $blogs = Blog::latest()->get();
+        $query = Blog::latest();
+        
+        if ($request->filled('search')) {
+            $query->where('title', 'like', '%' . $request->search . '%');
+        }
+        
+        $blogs = $query->get();
 
         return view('blogs.index', compact('blogs'));
     }
