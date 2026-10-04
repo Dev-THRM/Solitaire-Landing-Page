@@ -258,18 +258,29 @@ ul {
 }
 
 .transcend-bg.dual-video-bg {
-    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-video {
-    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.4;
-    transition: opacity 0.5s ease;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.hero-video:hover {
+.hero-video.active {
+    opacity: 0.4;
+}
+
+.hero-video:hover.active {
     opacity: 0.6;
 }
 
