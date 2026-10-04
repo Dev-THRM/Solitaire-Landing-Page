@@ -277,21 +277,21 @@ ul {
 }
 
 .hero-video.active {
-    opacity: 0.4;
+    opacity: 0.75;
 }
 
 .hero-video:hover.active {
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .bg-gradient-mask {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, #050608 0%, #050608 35%, rgba(5,6,8,0.7) 60%, rgba(5,6,8,0) 100%);
+    background: linear-gradient(to right, rgba(5,6,8,0.8) 0%, rgba(5,6,8,0.5) 40%, rgba(5,6,8,0) 100%);
 }
 
 .bg-gradient-mask.dark-theme-mask {
-    background: linear-gradient(to right, rgba(5,6,8,0.95) 0%, rgba(5,6,8,0.7) 35%, rgba(5,6,8,0.85) 60%, rgba(5,6,8,0.9) 100%);
+    background: linear-gradient(to right, rgba(5,6,8,0.75) 0%, rgba(5,6,8,0.4) 50%, rgba(5,6,8,0.2) 100%);
 }
 
 @keyframes slowZoom {
