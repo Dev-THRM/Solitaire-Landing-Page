@@ -65,7 +65,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('blogs.edit', compact('blog'));
     }
 
     /**
@@ -73,7 +73,24 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $blog->title = $request->title;
+        $blog->slug = Str::slug($request->title);
+        $blog->content = $request->content;
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('blogs', 'public');
+            $blog->image = $imagePath;
+        }
+
+        $blog->save();
+
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog updated successfully.');
     }
 
     /**
@@ -81,6 +98,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog deleted successfully.');
     }
 }
