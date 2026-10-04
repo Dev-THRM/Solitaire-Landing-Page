@@ -179,7 +179,7 @@ ul {
 }
 
 .logo-img {
-    height: 65px;
+    height: 120px;
     width: auto;
 }
 
@@ -257,10 +257,30 @@ ul {
     animation: slowZoom 20s infinite alternate linear;
 }
 
+.transcend-bg.dual-video-bg {
+    display: flex;
+}
+
+.hero-video {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: opacity 0.5s ease;
+}
+
+.hero-video:hover {
+    opacity: 0.6;
+}
+
 .bg-gradient-mask {
     position: absolute;
     inset: 0;
     background: linear-gradient(to right, #050608 0%, #050608 35%, rgba(5,6,8,0.7) 60%, rgba(5,6,8,0) 100%);
+}
+
+.bg-gradient-mask.dark-theme-mask {
+    background: linear-gradient(to right, rgba(5,6,8,0.95) 0%, rgba(5,6,8,0.7) 35%, rgba(5,6,8,0.85) 60%, rgba(5,6,8,0.9) 100%);
 }
 
 @keyframes slowZoom {
@@ -277,7 +297,7 @@ ul {
     width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 140px 4rem 0;
 }
 
 .hero-content-left {
@@ -544,9 +564,21 @@ ul {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     margin-top: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog-card {
@@ -1031,4 +1063,146 @@ ul {
     color: #888;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Dropdown Navbar Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 10, 15, 0.95);
+    min-width: 240px;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--clr-accent);
+}
+
+/* Job Modal Styles */
+.job-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.job-modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.job-modal {
+    background: var(--clr-bg-secondary);
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.05);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.job-modal-overlay.active .job-modal {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2.2rem;
+    color: var(--clr-text-muted);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: var(--clr-accent);
+}
+
+.job-modal h2 {
+    color: var(--clr-white);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    padding-right: 40px;
+    font-family: var(--font-heading);
+}
+
+.job-modal .job-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 20px;
+}
+
+.job-modal .job-desc {
+    color: var(--clr-text-main);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.job-modal .job-desc h3, .job-modal .job-desc h4, .job-modal .job-desc strong {
+    color: var(--clr-white);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.job-modal .job-desc ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.job-modal .job-desc li {
+    margin-bottom: 8px;
+}
+
+.job-modal .job-desc p {
+    margin-bottom: 20px;
 }

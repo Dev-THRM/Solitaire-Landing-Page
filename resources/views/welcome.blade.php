@@ -23,10 +23,21 @@
                 <a href="#"><img src="{{ asset('solitaire-logo.png') }}" alt="Solitaire Consultancy" class="logo-img"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#blogs">Insights</a></li>
+                <li class="dropdown">
+                    <a href="#services">Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/services/house-manager">House Manager & Estate Managers</a></li>
+                        <li><a href="/services/executive-assistant">Executive & Personal Assistants</a></li>
+                        <li><a href="/services/chef">Private Chefs & Cooks</a></li>
+                        <li><a href="/services/personal-butler">Personal Butlers</a></li>
+                        <li><a href="/services/chauffeur">Chauffeurs & Drivers</a></li>
+                        <li><a href="/services/nanny">Nannies & Babysitters</a></li>
+                    </ul>
+                </li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/jobs">Jobs</a></li>
                 <li><a href="#contact" class="btn-primary">Contact Us</a></li>
             </ul>
             <div class="mobile-menu-icon" id="mobile-menu-icon">
@@ -40,9 +51,10 @@
     <!-- Hero Section -->
     <section id="home" class="hero transcend-hero">
         <!-- Background -->
-        <div class="transcend-bg">
-            <img src="{{ asset('hero-bg.jpg') }}" alt="Background">
-            <div class="bg-gradient-mask"></div>
+        <div class="transcend-bg dual-video-bg">
+            <video autoplay loop muted playsinline src="{{ asset('hero-video1.mp4') }}" class="hero-video video-left"></video>
+            <video autoplay loop muted playsinline src="{{ asset('hero-video2.mp4') }}" class="hero-video video-right"></video>
+            <div class="bg-gradient-mask dark-theme-mask"></div>
         </div>
 
         <div class="hero-container transcend-container">
@@ -92,7 +104,7 @@
             </h2>
             <div class="transcend-about-text fade-up delay-2">
                 <p>Solitaire Consultancy did not originate out of a boardroom; rather, it originated out of a mere discussion. Initially, it all started out of two visionary individuals thinking about an enquiry made by a wealthy client. However, this single question soon turned out to be a much larger prospect. Therefore, it became their common aim to redefine premium staffing in Mumbai.</p>
-                <a href="#about" class="btn-primary" style="margin-top: 1rem; display: inline-block; background-color: #333; color: #fff; border: none; padding: 14px 28px; font-size: 1rem; text-transform: none; letter-spacing: 0;">Read More</a>
+                <a href="/about" class="btn-primary" style="margin-top: 1rem; display: inline-block; background-color: #333; color: #fff; border: none; padding: 14px 28px; font-size: 1rem; text-transform: none; letter-spacing: 0;">Read More</a>
             </div>
         </div>
     </section>
@@ -107,45 +119,51 @@
             
             <div class="services-carousel" id="services-carousel">
                 <div class="carousel-item active-left">
-                    <div class="service-card">
+                    <div class="service-card" style="position: relative;">
+                        <a href="/services/house-manager" style="position: absolute; inset: 0; z-index: 10;"></a>
                         <div class="icon">✧</div>
-                        <h3>House Manager/Estate Managers</h3>
+                        <h3><a href="/services/house-manager" style="color: inherit; text-decoration: none; position: relative; z-index: 20;">House Manager/Estate Managers</a></h3>
                         <p>Experienced professionals to oversee the seamless operation of your multiple properties and estates with precision.</p>
                     </div>
                 </div>
                 <div class="carousel-item active-right">
-                    <div class="service-card">
+                    <div class="service-card" style="position: relative;">
+                        <a href="/services/executive-assistant" style="position: absolute; inset: 0; z-index: 10;"></a>
                         <div class="icon">✦</div>
-                        <h3>Executive Assistants/Personal Assistants</h3>
+                        <h3><a href="/services/executive-assistant" style="color: inherit; text-decoration: none; position: relative; z-index: 20;">Executive Assistants/Personal Assistants</a></h3>
                         <p>Highly capable executive and personal assistants to manage your schedule, travel, and lifestyle requirements.</p>
                     </div>
                 </div>
                 <div class="carousel-item next-1">
-                    <div class="service-card">
+                    <div class="service-card" style="position: relative;">
+                        <a href="/services/chef" style="position: absolute; inset: 0; z-index: 10;"></a>
                         <div class="icon">✧</div>
-                        <h3>Chefs/Cook</h3>
+                        <h3><a href="/services/chef" style="color: inherit; text-decoration: none; position: relative; z-index: 20;">Chefs/Cook</a></h3>
                         <p>Culinary experts capable of designing bespoke menus tailored to your dietary preferences and entertaining needs.</p>
                     </div>
                 </div>
                 <div class="carousel-item next-2">
-                    <div class="service-card">
+                    <div class="service-card" style="position: relative;">
+                        <a href="/services/personal-butler" style="position: absolute; inset: 0; z-index: 10;"></a>
                         <div class="icon">✦</div>
-                        <h3>Personal Butler</h3>
-                        <p>Impeccably trained housekeepers, butlers, and nannies dedicated to maintaining the sanctuary of your home.</p>
+                        <h3><a href="/services/personal-butler" style="color: inherit; text-decoration: none; position: relative; z-index: 20;">Personal Butler</a></h3>
+                        <p>Impeccably trained butlers dedicated to maintaining the sanctuary of your home and providing highly personalized service.</p>
                     </div>
                 </div>
                 <div class="carousel-item prev-2">
-                    <div class="service-card">
+                    <div class="service-card" style="position: relative;">
+                        <a href="/services/chauffeur" style="position: absolute; inset: 0; z-index: 10;"></a>
                         <div class="icon">✧</div>
-                        <h3>Chauffeurs/Drivers</h3>
+                        <h3><a href="/services/chauffeur" style="color: inherit; text-decoration: none; position: relative; z-index: 20;">Chauffeurs/Drivers</a></h3>
                         <p>Professional, discreet, and highly trained drivers ensuring your safe and timely arrival at every destination.</p>
                     </div>
                 </div>
                 <div class="carousel-item prev-1">
-                    <div class="service-card">
+                    <div class="service-card" style="position: relative;">
+                        <a href="/services/nanny" style="position: absolute; inset: 0; z-index: 10;"></a>
                         <div class="icon">✦</div>
-                        <h3>Nanny/Babysitter</h3>
-                        <p>Elite close protection and estate security experts providing absolute peace of mind for you and your family.</p>
+                        <h3><a href="/services/nanny" style="color: inherit; text-decoration: none; position: relative; z-index: 20;">Nanny/Babysitter</a></h3>
+                        <p>Experienced and nurturing child care professionals providing absolute peace of mind for you and your family.</p>
                     </div>
                 </div>
             </div>
@@ -199,9 +217,112 @@
                 <p class="subtitle-text">Expert advice on luxury lifestyle management and household staffing.</p>
             </div>
             
-            <!-- Blog Grid (Populated by JavaScript) -->
-            <div class="blog-grid" id="blog-container">
-                <!-- Blogs will be injected here dynamically -->
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                @foreach($blogs as $index => $blog)
+                <article class="blog-card reveal-up" style="transition-delay: {{ $index * 0.2 }}s; position: relative;">
+                    <a href="/blog/{{ $blog->slug }}" style="position: absolute; inset: 0; z-index: 10;"></a>
+                    <div class="blog-img-wrapper">
+                        @if($blog->image)
+                        <img src="{{ Storage::url($blog->image) }}" alt="{{ $blog->title }}" class="blog-img" loading="lazy">
+                        @else
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="{{ $blog->title }}" class="blog-img" loading="lazy">
+                        @endif
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Article</span>
+                            <span>{{ $blog->created_at->format('M d, Y') }}</span>
+                        </div>
+                        <h3 class="blog-title"><a href="/blog/{{ $blog->slug }}" style="color: inherit; text-decoration: none; position: relative; z-index: 20;">{{ $blog->title }}</a></h3>
+                        <p class="blog-excerpt">{{ Str::limit(html_entity_decode(strip_tags($blog->content)), 120) }}</p>
+                        <a href="/blog/{{ $blog->slug }}" class="read-more" style="position: relative; z-index: 20;">Read Article</a>
+                    </div>
+                </article>
+                @endforeach
+            </div>
+            
+            <div class="text-center reveal-up" style="margin-top: 1.5rem;">
+                <a href="/blogs" class="btn-primary" style="display: inline-block;">View All Blogs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="blogs dark-section" style="background-color: var(--clr-bg-secondary);">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <h4 class="section-subtitle">Careers</h4>
+                <h2 class="section-title text-white">Latest Job Listings</h2>
+                <p class="subtitle-text">Explore elite opportunities in household and estate management.</p>
+            </div>
+            
+            @if(session('success'))
+            <div style="background-color: #1abc9c; color: white; padding: 15px; border-radius: 4px; text-align: center; margin-bottom: 30px;">
+                {{ session('success') }}
+            </div>
+            @endif
+
+            <div class="blog-grid">
+                @foreach($jobs as $index => $job)
+                <article class="blog-card reveal-up" style="transition-delay: {{ $index * 0.1 }}s">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>{{ $job->location }}</span>
+                            <span>{{ $job->type }}</span>
+                        </div>
+                        <h3 class="blog-title">{{ $job->title }}</h3>
+                        <p class="blog-excerpt">{{ Str::limit(html_entity_decode(strip_tags($job->description)), 120) }}</p>
+                        <button class="read-more" style="background:none; border:none; padding:0; cursor:pointer; font:inherit; color:var(--clr-accent);" onclick="document.getElementById('job-modal-{{ $job->id }}').classList.add('active'); document.body.style.overflow='hidden';">View Job</button>
+                    </div>
+                </article>
+                
+                <!-- Modal for this job -->
+                <div class="job-modal-overlay" id="job-modal-{{ $job->id }}">
+                    <div class="job-modal">
+                        <span class="close-modal" onclick="document.getElementById('job-modal-{{ $job->id }}').classList.remove('active'); document.body.style.overflow='auto';">&times;</span>
+                        <h2>{{ $job->title }}</h2>
+                        <div class="job-meta">
+                            <span>{{ $job->location }}</span>
+                            <span>{{ $job->type }}</span>
+                        </div>
+                        <div class="job-desc">
+                            {!! $job->description !!}
+                        </div>
+                        
+                        <!-- Apply Now Button -->
+                        <button class="btn-primary mt-4" style="margin-top: 20px;" onclick="document.getElementById('welcome-apply-form-{{ $job->id }}').style.display='block'; this.style.display='none';">Apply Now</button>
+                        
+                        <!-- Apply Form -->
+                        <div id="welcome-apply-form-{{ $job->id }}" style="display: none; margin-top: 20px;">
+                            <form action="{{ route('jobs.apply', $job->id) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group mb-3">
+                                    <input type="text" name="name" class="form-control w-100" placeholder="Full Name" required style="padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 4px; width: 100%; box-sizing: border-box;">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="email" name="email" class="form-control w-100" placeholder="Email Address" required style="padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 4px; margin-top:10px; width: 100%; box-sizing: border-box;">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="tel" name="phone" class="form-control w-100" placeholder="Phone Number" required style="padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 4px; margin-top:10px; width: 100%; box-sizing: border-box;">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" name="location" class="form-control w-100" placeholder="Your Location" required style="padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 4px; margin-top:10px; width: 100%; box-sizing: border-box;">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label style="color: rgba(255,255,255,0.7); display:block; margin-top:10px; margin-bottom: 5px; font-size: 0.9rem;">Upload Resume (PDF/DOC)</label>
+                                    <input type="file" name="resume" class="form-control w-100" accept=".pdf,.doc,.docx" required style="padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 4px; width: 100%; box-sizing: border-box;">
+                                </div>
+                                <button type="submit" class="btn-primary w-100" style="margin-top: 15px; width: 100%; padding: 12px; cursor: pointer;">Submit Application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            
+            <div class="text-center reveal-up" style="margin-top: 1.5rem;">
+                <a href="/jobs" class="btn-primary" style="display: inline-block;">View All Jobs</a>
             </div>
         </div>
     </section>
@@ -353,17 +474,17 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/dashboard">Dashboard</a></li>
                          <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Our Services</a></li>
-                        <li><a href="#blogs">Insights</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/jobs">Jobs</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p>Email: info@solitaireconsultancyservices.com</p>
-                    <p>Phone: +91 90044 39392</p>
-                    <p>Mumbai, Maharashtra, India</p>
+                    <p>Email: help@solitaireconsultancyservices.com</p>
+                    <p>Phone: +91 99304 39075</p>
+                    <p>Sahar, Andheri East, Mumbai 400099</p>
                 </div>
             </div>
             <div class="footer-bottom">
