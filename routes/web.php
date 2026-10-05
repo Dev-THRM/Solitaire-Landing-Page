@@ -10,7 +10,7 @@ use App\Models\JobListing;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $blogs = Blog::latest()->take(3)->get();
+    $blogs = Blog::orderByDesc('id')->take(3)->get();
     $jobs = JobListing::latest()->take(3)->get();
 
     return view('welcome', compact('blogs', 'jobs'));
@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/blogs', function () {
-    $blogs = Blog::latest()->get();
+    $blogs = Blog::orderByDesc('id')->get();
 
     return view('public.blogs', compact('blogs'));
 });
