@@ -53,6 +53,7 @@ class BlogController extends Controller
             $blog->image = $imagePath;
         }
 
+        $blog->published_at = $blog->published_at ?? now();
         $blog->save();
 
         return redirect()->route('admin.blogs.index')->with('success', 'Blog created successfully.');

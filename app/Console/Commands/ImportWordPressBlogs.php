@@ -102,6 +102,7 @@ class ImportWordPressBlogs extends Command
                     'slug' => $slug,
                     'content' => $content,
                     'image' => $imagePath,
+                    'published_at' => $date,
                     'created_at' => $date,
                     'updated_at' => $date,
                 ]);
