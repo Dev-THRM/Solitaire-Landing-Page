@@ -10,6 +10,11 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
     require $maintenance;
 }
 
+// Load mbstring polyfill before autoloader if the extension is missing...
+if (!extension_loaded('mbstring')) {
+    require __DIR__.'/../vendor/symfony/polyfill-mbstring/bootstrap.php';
+}
+
 // Register the Composer autoloader...
 require __DIR__.'/../vendor/autoload.php';
 
