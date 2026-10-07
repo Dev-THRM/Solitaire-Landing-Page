@@ -30,7 +30,7 @@
                 
                 <div class="relative z-20 flex flex-col justify-center px-12 py-12 lg:px-24 w-full h-full text-white">
                     <a href="/" class="mb-12 inline-block">
-                        <img src="{{ asset('solitaire-logo.png') }}" alt="Solitaire Logo" class="h-16 w-auto p-2 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                        <img src="{{ asset('solitaire-logo.png') }}" alt="Solitaire Logo" class="h-32 w-auto p-3 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
                     </a>
                     
                     <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight text-white">
