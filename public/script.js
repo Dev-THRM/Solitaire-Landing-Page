@@ -130,7 +130,7 @@ if (carouselItems.length === 6) {
     setInterval(() => {
         currentIndex = (currentIndex + 2) % 6; // Move by 2 to swap the active pair
         updateCarousel();
-    }, 4500); // 4.5 seconds
+    }, 3000); // 3.0 seconds
 
     carouselItems.forEach((item, index) => {
         item.addEventListener('click', () => {

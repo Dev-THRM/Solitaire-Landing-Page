@@ -64,9 +64,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero transcend-hero">
         <!-- Background -->
-        <div class="transcend-bg dual-video-bg">
-            <video autoplay muted playsinline src="{{ asset('hero-video1.mp4') }}" class="hero-video video-left active" id="hero-vid-1"></video>
-            <video muted playsinline src="{{ asset('hero-video2.mp4') }}" class="hero-video video-right" id="hero-vid-2"></video>
+        <div class="transcend-bg single-video-bg">
+            <video autoplay loop muted playsinline src="{{ asset('hero-video.mp4') }}" class="hero-video active" id="hero-vid-1"></video>
             <div class="bg-gradient-mask dark-theme-mask"></div>
         </div>
 
@@ -481,7 +480,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>Solitaire <span>Consultancy</span></h3>
+                    <h3>Solitaire <span>Consultancy</span> Services</h3>
                     <p>Bringing a touch of brilliance into the lives of our discerning clients across Mumbai and beyond.</p>
                 </div>
                 <div class="footer-links">
@@ -511,22 +510,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const vid1 = document.getElementById('hero-vid-1');
-            const vid2 = document.getElementById('hero-vid-2');
             
-            if(vid1 && vid2) {
-                vid1.addEventListener('ended', function() {
-                    vid1.classList.remove('active');
-                    vid2.classList.add('active');
-                    vid2.currentTime = 0;
-                    vid2.play();
-                });
-                
-                vid2.addEventListener('ended', function() {
-                    vid2.classList.remove('active');
-                    vid1.classList.add('active');
-                    vid1.currentTime = 0;
-                    vid1.play();
-                });
+            if(vid1) {
+                vid1.playbackRate = 1.5;
             }
         });
     </script>
