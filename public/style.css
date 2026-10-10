@@ -702,6 +702,127 @@ ul {
 }
 
 /* ==========================================================================
+   Team Section
+   ========================================================================== */
+.team-section {
+    padding: var(--section-padding);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.team-card {
+    background: var(--clr-bg-tertiary);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: var(--transition-smooth);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-soft);
+    border-color: rgba(41, 128, 185, 0.3);
+}
+
+.team-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.6s ease;
+}
+
+.team-card:hover .team-img {
+    transform: scale(1.05);
+}
+
+.team-socials {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(10, 11, 14, 0.9), transparent);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-socials {
+    transform: translateY(0);
+}
+
+.team-socials a {
+    color: var(--clr-white);
+    background: rgba(41, 128, 185, 0.8);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.team-socials a:hover {
+    background: var(--clr-accent-blue);
+}
+
+.team-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-name {
+    color: var(--clr-white);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.team-designation {
+    color: var(--clr-accent-blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.team-desc {
+    font-size: 0.95rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .footer {
