@@ -60,7 +60,7 @@
     </nav>
 
     <!-- Jobs Section -->
-    <section class="blogs dark-section" style="padding-top: 220px; min-height: 80vh; background-color: var(--clr-bg-secondary);">
+    <section class="blogs dark-section" style="padding-top: 280px; min-height: 80vh; background-color: var(--clr-bg-secondary);">
         <div class="container">
             <div class="section-header text-center reveal-up">
                 <h4 class="section-subtitle">Careers</h4>

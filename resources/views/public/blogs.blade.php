@@ -60,7 +60,7 @@
     </nav>
 
     <!-- Blogs Section -->
-    <section class="blogs dark-section" style="padding-top: 220px; min-height: 80vh;">
+    <section class="blogs dark-section" style="padding-top: 280px; min-height: 80vh;">
         <div class="container">
             <div class="section-header text-center reveal-up">
                 <h4 class="section-subtitle">Insights & Articles</h4>
