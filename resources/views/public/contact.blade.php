@@ -174,7 +174,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/#about">About</a></li>
                 <li class="dropdown">
-                    <a href="/#services">Services ▾</a>
+                    <a href="/services">Services ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="/services/house-manager">House Manager & Estate Managers</a></li>
                         <li><a href="/services/executive-assistant">Executive & Personal Assistants</a></li>
@@ -288,7 +288,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                          <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#services">Our Services</a></li>
+                        <li><a href="/services">Our Services</a></li>
                         <li><a href="/blogs">Blogs</a></li>
                         <li><a href="/jobs">Jobs</a></li>
                     </ul>

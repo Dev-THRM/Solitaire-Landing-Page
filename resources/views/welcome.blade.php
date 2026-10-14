@@ -39,7 +39,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li class="dropdown">
-                    <a href="#services">Services ▾</a>
+                    <a href="/services">Services ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="/services/house-manager">House Manager & Estate Managers</a></li>
                         <li><a href="/services/executive-assistant">Executive & Personal Assistants</a></li>
@@ -178,6 +178,9 @@
                         <p>Experienced and nurturing child care professionals providing absolute peace of mind for you and your family.</p>
                     </div>
                 </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="/services" class="btn-primary" style="display: inline-block;">Explore All Services &rarr;</a>
             </div>
         </div>
     </section>
@@ -487,7 +490,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                          <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="/services">Our Services</a></li>
                         <li><a href="/blogs">Blogs</a></li>
                         <li><a href="/jobs">Jobs</a></li>
                     </ul>
